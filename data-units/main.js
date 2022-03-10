@@ -1,182 +1,181 @@
-const bit = new BigNumber(1)
-const byte = new BigNumber(8);
+const one = new BigNumber(1)
 const units = {
     "byte": {
         "name": "Byte",
         "unit": "B",
-        "factor": byte
+        "factor": 8
     },
     "bit": {
         "name": "Bit",
         "unit": "bit",
-        "factor": bit
+        "factor": 1
     },
     "decimal_byte": [
         {
             "name": "Kilobyte",
             "unit": "kB",
-            "factor": byte.multiply(1000)
+            "factor": one.multiply(1000).multiply(8)
         },
         {
             "name": "Megabyte",
             "unit": "MB",
-            "factor": byte.multiply(1000).pow(2)
+            "factor": one.multiply(1000).pow(2).multiply(8)
         },
         {
             "name": "Gigabyte",
             "unit": "GB",
-            "factor": byte.multiply(1000).pow(3)
+            "factor": one.multiply(1000).pow(3).multiply(8)
         },
         {
             "name": "Terabyte",
             "unit": "TB",
-            "factor": byte.multiply(1000).pow(4)
+            "factor": one.multiply(1000).pow(4).multiply(8)
         },
         {
             "name": "Petabyte",
             "unit": "PB",
-            "factor": byte.multiply(1000).pow(5)
+            "factor": one.multiply(1000).pow(5).multiply(8)
         },
         {
             "name": "Exabyte",
             "unit": "EB",
-            "factor": byte.multiply(1000).pow(6)
+            "factor": one.multiply(1000).pow(6).multiply(8)
         },
         {
             "name": "Zettabyte",
             "unit": "ZB",
-            "factor": byte.multiply(1000).pow(7)
+            "factor": one.multiply(1000).pow(7).multiply(8)
         },
         {
             "name": "Yottabyte",
             "unit": "YB",
-            "factor": byte.multiply(1000).pow(8)
+            "factor": one.multiply(1000).pow(8).multiply(8)
         }
     ],
     "decimal_bit": [
         {
             "name": "Kilobit",
             "unit": "kbit",
-            "factor": bit.multiply(1000)
+            "factor": one.multiply(1000)
         },
         {
             "name": "Megabit",
             "unit": "Mbit",
-            "factor": bit.multiply(1000).pow(2)
+            "factor": one.multiply(1000).pow(2)
         },
         {
             "name": "Gigabit",
             "unit": "Gbit",
-            "factor": bit.multiply(1000).pow(3)
+            "factor": one.multiply(1000).pow(3)
         },
         {
             "name": "Terabit",
             "unit": "Tbit",
-            "factor": bit.multiply(1000).pow(4)
+            "factor": one.multiply(1000).pow(4)
         },
         {
             "name": "Petabit",
             "unit": "Pbit",
-            "factor": bit.multiply(1000).pow(5)
+            "factor": one.multiply(1000).pow(5)
         },
         {
             "name": "Exabit",
             "unit": "Ebit",
-            "factor": bit.multiply(1000).pow(6)
+            "factor": one.multiply(1000).pow(6)
         },
         {
             "name": "Zettabit",
             "unit": "Zbit",
-            "factor": bit.multiply(1000).pow(7)
+            "factor": one.multiply(1000).pow(7)
         },
         {
             "name": "Yottabit",
             "unit": "Ybit",
-            "factor": bit.multiply(1000).pow(8)
+            "factor": one.multiply(1000).pow(8)
         }
     ],
     "binary_byte": [
         {
             "name": "Kibibyte",
             "unit": "KiB",
-            "factor": byte.multiply(1024)
+            "factor": one.multiply(1024).multiply(8)
         },
         {
             "name": "Mebibyte",
             "unit": "MiB",
-            "factor": byte.multiply(1024).pow(2)
+            "factor": one.multiply(1024).pow(2).multiply(8)
         },
         {
             "name": "Gibibyte",
             "unit": "GiB",
-            "factor": byte.multiply(1024).pow(3)
+            "factor": one.multiply(1024).pow(3).multiply(8)
         },
         {
             "name": "Tebibyte",
             "unit": "TiB",
-            "factor": byte.multiply(1024).pow(4)
+            "factor": one.multiply(1024).pow(4).multiply(8)
         },
         {
             "name": "Pebibyte",
             "unit": "PiB",
-            "factor": byte.multiply(1024).pow(5)
+            "factor": one.multiply(1024).pow(5).multiply(8)
         },
         {
             "name": "Exbibyte",
             "unit": "EiB",
-            "factor": byte.multiply(1024).pow(6)
+            "factor": one.multiply(1024).pow(6).multiply(8)
         },
         {
             "name": "Zebibyte",
             "unit": "ZiB",
-            "factor": byte.multiply(1024).pow(7)
+            "factor": one.multiply(1024).pow(7).multiply(8)
         },
         {
             "name": "Yobibyte",
             "unit": "YiB",
-            "factor": byte.multiply(1024).pow(8)
+            "factor": one.multiply(1024).pow(8).multiply(8)
         }
     ],
     "binary_bit": [
         {
             "name": "Kibibit",
             "unit": "Kibit",
-            "factor": bit.multiply(1024)
+            "factor": one.multiply(1024)
         },
         {
             "name": "Mebibit",
             "unit": "Mibit",
-            "factor": bit.multiply(1024).pow(2)
+            "factor": one.multiply(1024).pow(2)
         },
         {
             "name": "Gibibit",
             "unit": "Gibit",
-            "factor": bit.multiply(1024).pow(3)
+            "factor": one.multiply(1024).pow(3)
         },
         {
             "name": "Tebibit",
             "unit": "Tibit",
-            "factor": bit.multiply(1024).pow(4)
+            "factor": one.multiply(1024).pow(4)
         },
         {
             "name": "Pebibit",
             "unit": "Pibit",
-            "factor": bit.multiply(1024).pow(5)
+            "factor": one.multiply(1024).pow(5)
         },
         {
             "name": "Exbibit",
             "unit": "Eibit",
-            "factor": bit.multiply(1024).pow(6)
+            "factor": one.multiply(1024).pow(6)
         },
         {
             "name": "Zebibit",
             "unit": "Zibit",
-            "factor": bit.multiply(1024).pow(7)
+            "factor": one.multiply(1024).pow(7)
         },
         {
             "name": "Yobibit",
             "unit": "Yibit",
-            "factor": bit.multiply(1024).pow(8)
+            "factor": one.multiply(1024).pow(8)
         }
     ]
 };
