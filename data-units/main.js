@@ -202,7 +202,7 @@ function inputChanged(event) {
         event.stopImmediatePropagation();
     } else {
         active_event = true;
-        let bits = parseInt(event.target.value) * parseInt(event.target.getAttribute("factor"));
+        let bits = parseFloat(event.target.value) * parseInt(event.target.getAttribute("factor"));
         inputs.forEach(input => {
             if (input !== event.target) {
                 input.value = bits / parseInt(input.getAttribute("factor"));
