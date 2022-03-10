@@ -204,7 +204,9 @@ function inputChanged(event) {
         active_event = true;
         let bits = parseInt(event.target.value) * parseInt(event.target.getAttribute("factor"));
         inputs.forEach(input => {
-            input.value = bits / parseInt(input.getAttribute("factor"))
+            if (input !== event.target) {
+                input.value = bits / parseInt(input.getAttribute("factor"));
+            }
         });
         active_event = false;
     }
@@ -213,6 +215,7 @@ function inputChanged(event) {
 function addInputHTML(parent, data) {
     let input = document.createElement("input");
     input.setAttribute("type", "number");
+    input.setAttribute("step", "any");
     input.setAttribute("name", data.unit);
     input.setAttribute("placeholder", data.unit);
     input.setAttribute("factor", data.factor);
