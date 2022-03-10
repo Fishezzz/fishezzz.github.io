@@ -1,0 +1,39 @@
+body {
+	font-family: sans-serif;
+	font-size: medium;
+}
+
+.container {
+	margin: 1em;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	row-gap: 1em;
+	column-gap: 1em;
+}
+
+.unit {
+	margin: 5px;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	column-gap: 1ch;
+}
+
+.unit label {
+	display: inline-block;
+	width: 12.5ch;
+	margin: 2x 0;
+}
+
+.unit input {
+	width: 30ch;
+	height: 3ex;
+	border-radius: 5px;
+}
