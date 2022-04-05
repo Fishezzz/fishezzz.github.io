@@ -1,0 +1,16 @@
+body {
+    margin: 0px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 99vmax;
+    height: 99vmax;
+}
+
+.slider {
+    width: calc(90% - 140px);
+}
