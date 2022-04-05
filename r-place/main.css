@@ -4,6 +4,12 @@ body {
     color: #ffffff;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+}
+
 img {
     /* display: block; */
     margin: auto;
