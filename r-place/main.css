@@ -5,12 +5,8 @@ body {
 }
 
 img {
-    display: block;
+    /* display: block; */
     margin: auto;
     width: 99vmax;
     height: 99vmax;
-}
-
-.slider {
-    width: calc(90% - 140px);
 }
